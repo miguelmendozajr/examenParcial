@@ -4,12 +4,13 @@ class StudentHttpHandler {
     }
   
     async logStudent(req, res) {
-      const { username, password } = req.body;  
+      const { username, password } = req.body;
+       
       try {
         const data = await this.studentController.getStudent(username, password);
         res.json(data);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(400).json({ error: error.message });
       }
     }
   
