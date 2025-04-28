@@ -43,7 +43,7 @@ export default function SignUp() {
   return (
     <main className="flex min-h-[calc(100vh-73px)] flex-col items-center justify-center p-8">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-center mb-6">Inicio de sesión</h1>
+        <h1 className="text-2xl text-black font-bold text-center mb-6">Inicio de sesión</h1>
         
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -53,7 +53,7 @@ export default function SignUp() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="username" className="block text-sm font-medium text-black">
               Nombre de usuario
             </label>
             <input
@@ -61,12 +61,12 @@ export default function SignUp() {
               id="username"
               value={formData.username}
               onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+              className="mt-1 block w-full text-black rounded-md border border-gray-300 px-3 py-2"
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-black">
               Contraseña
             </label>
             <input
@@ -74,7 +74,7 @@ export default function SignUp() {
               id="password"
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+              className="mt-1 block w-full text-black rounded-md border border-gray-300 px-3 py-2"
             />
           </div>
 
