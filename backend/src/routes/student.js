@@ -13,7 +13,7 @@ const studentController = new StudentController(studentService);
 const studentHandler = new StudentHttpHandler(studentController);
 
 // Set up routes with bound handler methods
-router.get('/login', studentHandler.logStudent.bind(studentHandler));
+router.post('/login', studentHandler.logStudent.bind(studentHandler));
 
 
 module.exports = router;
